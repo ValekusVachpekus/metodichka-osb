@@ -150,5 +150,24 @@ function copyCode(btn) {
 }
 </script>
 
+
+<script>
+function toggleNavDropdown() {
+  document.getElementById('navDropdown').classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+    var d = document.getElementById('navDropdown');
+    if (d) d.classList.remove('open');
+  }
+});
+(function() {
+  var path = window.location.pathname;
+  document.querySelectorAll('.nav-dropdown a[data-page]').forEach(function(a) {
+    if (path.indexOf(a.getAttribute('data-page')) !== -1) {
+      a.classList.add('active');
+    }
+  });
+})();
+</script>
 </body>
 </html>
