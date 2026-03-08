@@ -6,14 +6,14 @@
 }
 
 :root {
-  --bg-dark: #0d1117;
-  --bg-card: #161b22;
-  --bg-nav: #0d1117;
-  --accent: #1f6feb;
-  --accent-hover: #388bfd;
-  --text-primary: #e6edf3;
-  --text-secondary: #8b949e;
-  --border: #30363d;
+  --bg-dark: #080e1a;
+  --bg-card: #0d1628;
+  --bg-nav: #060b14;
+  --accent: #2c5f9e;
+  --accent-hover: #4a85c8;
+  --text-primary: #d8e6f5;
+  --text-secondary: #7090b0;
+  --border: #1a2d4a;
 }
 
 body {
@@ -67,7 +67,7 @@ body > nav .nav-logo:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+  background: linear-gradient(135deg, #080e1a 0%, #0d1628 50%, #080e1a 100%);
   overflow: hidden;
   border-bottom: 1px solid var(--border);
 }
@@ -77,7 +77,7 @@ body > nav .nav-logo:hover {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(31, 111, 235, 0.08) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(44, 95, 158, 0.12) 0%, transparent 70%);
 }
 
 .hero-content {
@@ -212,7 +212,7 @@ body > nav .nav-logo:hover {
   height: 170px;
   object-fit: cover;
   display: block;
-  background: linear-gradient(135deg, #161b22 0%, #1c2333 100%);
+  background: linear-gradient(135deg, #0d1628 0%, #111e35 100%);
 }
 
 .card-img-placeholder {
@@ -222,7 +222,7 @@ body > nav .nav-logo:hover {
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
-  background: linear-gradient(135deg, #1c2333 0%, #0d1117 100%);
+  background: linear-gradient(135deg, #111e35 0%, #080e1a 100%);
   border-bottom: 1px solid var(--border);
 }
 
@@ -618,7 +618,7 @@ footer {
 }
 .branch-tag {
   flex-shrink: 0;
-  background: #21262d;
+  background: #102040;
   border: 1px solid var(--border);
   color: var(--accent);
   font-weight: 700;
@@ -753,14 +753,14 @@ footer {
   transition: background 0.15s, color 0.15s;
 }
 .nav-dropdown a:hover {
-  background: #21262d;
+  background: #102040;
   color: var(--text-primary);
   text-decoration: none;
 }
 .nav-dropdown a.active {
   color: var(--accent);
   font-weight: 600;
-  background: #1c2333;
+  background: #0d1628;
 }
 
 /* ===== Стили страницы рапортов (перенесено из inline) ===== */
@@ -811,7 +811,7 @@ footer {
 .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
 .copy-btn.copied { color: #3fb950; border-color: #3fb950; }
 .code-block {
-  background: #0d1117;
+  background: #080e1a;
   border: 1px solid var(--border);
   border-radius: 0 0 6px 6px;
   padding: 1.2rem 1.4rem;
