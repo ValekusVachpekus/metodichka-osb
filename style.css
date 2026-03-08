@@ -648,3 +648,155 @@ footer {
   padding: 0;
 }
 .factors-box ul li { margin-bottom: 0.3rem; }
+
+/* ===== Выпадающее меню разделов ===== */
+.nav-sections {
+  position: relative;
+  margin-left: auto;
+}
+.nav-dropdown-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  font-family: inherit;
+}
+.nav-dropdown-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-width: 250px;
+  z-index: 200;
+  padding: 0.4rem 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+}
+.nav-dropdown.open { display: block; }
+.nav-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-dropdown a:hover {
+  background: #21262d;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.nav-dropdown a.active {
+  color: var(--accent);
+  font-weight: 600;
+  background: #1c2333;
+}
+
+/* ===== Стили страницы рапортов (перенесено из inline) ===== */
+.info-list { list-style: none; padding: 0; margin: 0.5rem 0 1.2rem; }
+.info-list li {
+  padding: 0.5rem 0 0.5rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  position: relative;
+}
+.info-list li:last-child { border-bottom: none; }
+.info-list li::before {
+  content: '—';
+  position: absolute; left: 0;
+  color: var(--accent); font-weight: 700;
+}
+.code-wrap {
+  position: relative;
+  margin: 0.5rem 0 1.8rem;
+}
+.code-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  padding: 0.4rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copy-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  font-family: inherit;
+}
+.copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+.copy-btn.copied { color: #3fb950; border-color: #3fb950; }
+.code-block {
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: 0 0 6px 6px;
+  padding: 1.2rem 1.4rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: #a5d6ff;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  margin: 0;
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+.app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.3rem;
+  background: #238636;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.app-btn:hover { background: #2ea043; text-decoration: none; color: #fff; transform: translateY(-2px); }
+.forum-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.3rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.forum-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; transform: translateY(-2px); }

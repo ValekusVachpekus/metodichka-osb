@@ -5,126 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Написание рапортов — Методичка ОСБ</title>
   <link rel="stylesheet" href="../style.css">
-  <style>
-    .info-list { list-style: none; padding: 0; margin: 0.5rem 0 1.2rem; }
-    .info-list li {
-      padding: 0.5rem 0 0.5rem 1.2rem;
-      border-bottom: 1px solid var(--border);
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      position: relative;
-    }
-    .info-list li:last-child { border-bottom: none; }
-    .info-list li::before {
-      content: '—';
-      position: absolute; left: 0;
-      color: var(--accent); font-weight: 700;
-    }
-
-    /* Блок кода */
-    .code-wrap {
-      position: relative;
-      margin: 0.5rem 0 1.8rem;
-    }
-    .code-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-bottom: none;
-      border-radius: 6px 6px 0 0;
-      padding: 0.4rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .copy-btn {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
-      font-size: 0.75rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .copy-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-    .copy-btn.copied {
-      color: #3fb950;
-      border-color: #3fb950;
-    }
-    .code-block {
-      background: #0d1117;
-      border: 1px solid var(--border);
-      border-radius: 0 0 6px 6px;
-      padding: 1.2rem 1.4rem;
-      font-family: 'Courier New', monospace;
-      font-size: 0.82rem;
-      color: #a5d6ff;
-      white-space: pre-wrap;
-      word-break: break-word;
-      overflow-x: auto;
-      margin: 0;
-    }
-    /* Кнопки внизу */
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin: 1rem 0 1.5rem;
-    }
-    .app-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1.3rem;
-      background: #238636;
-      color: #fff;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.92rem;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .app-btn:hover {
-      background: #2ea043;
-      text-decoration: none;
-      color: #fff;
-      transform: translateY(-2px);
-    }
-    .forum-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1.3rem;
-      background: var(--bg-card);
-      color: var(--text-primary);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.92rem;
-      text-decoration: none;
-      transition: border-color 0.2s, transform 0.15s;
-    }
-    .forum-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-      transform: translateY(-2px);
-    }
-  </style>
 </head>
 <body>
 
 <nav>
   <a class="nav-logo" href="../index.html">ОСБ — Методическое пособие</a>
+  <div class="nav-sections">
+    <button class="nav-dropdown-btn" onclick="toggleNavDropdown()">Разделы ▾</button>
+    <div class="nav-dropdown" id="navDropdown">
+      <a href="../pages/polnomochiya.html" data-page="polnomochiya">⚖️ Полномочия ОСБ</a>
+      <a href="../pages/proverki.html" data-page="proverki">🔍 Проверки</a>
+      <a href="../pages/raporty.html" data-page="raporty">📝 Написание рапортов</a>
+      <a href="../pages/opros.html" data-page="opros">🗣️ Опрос</a>
+      <a href="../pages/nadzor.html" data-page="nadzor">🛡️ Надзорная деятельность</a>
+      <a href="../pages/vzyskaniya.html" data-page="vzyskaniya">📋 Меры взыскания</a>
+      <a href="../pages/dejstviya.html" data-page="dejstviya">🚨 Действия при нарушении</a>
+      <a href="../pages/normativy.html" data-page="normativy">📜 Нормативные документы</a>
+    </div>
+  </div>
 </nav>
 
 <div class="page-wrapper">
