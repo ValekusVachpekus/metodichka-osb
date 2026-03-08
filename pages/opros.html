@@ -183,6 +183,7 @@ function toggleNavDropdown() {
   document.getElementById('navDropdown').classList.toggle('open');
 }
 document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-sections')) {
     var d = document.getElementById('navDropdown');
     if (d) d.classList.remove('open');
   }
