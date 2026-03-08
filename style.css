@@ -14,6 +14,11 @@
   --text-primary: #eaf2fc;
   --text-secondary: #a0bcd8;
   --border: #1a2d4a;
+  /* Дополнительные акценты */
+  --gold: #c8943a;
+  --gold-hover: #e0aa4a;
+  --teal: #1f7a70;
+  --teal-hover: #2aaa9b;
 }
 
 body {
@@ -89,8 +94,8 @@ body > nav .nav-logo:hover {
 
 .hero-badge {
   display: inline-block;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid var(--gold);
+  color: var(--gold);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -110,7 +115,7 @@ body > nav .nav-logo:hover {
 }
 
 .hero h1 span {
-  color: var(--accent);
+  color: var(--gold);
 }
 
 .hero .hero-sub {
@@ -152,7 +157,7 @@ body > nav .nav-logo:hover {
   color: var(--text-primary);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--gold);
   display: inline-block;
 }
 
@@ -305,6 +310,8 @@ a.card:hover h3 {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--text-primary);
+  border-left: 4px solid var(--gold);
+  padding-left: 0.75rem;
 }
 
 .page-content {
@@ -458,7 +465,7 @@ footer {
 }
 .task-list li::before {
   content: '—';
-  color: var(--accent);
+  color: var(--gold);
   font-weight: 700;
   flex-shrink: 0;
   margin-top: 0.05rem;
@@ -468,20 +475,20 @@ footer {
 .article-block {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--gold);
   border-radius: 8px;
   padding: 1.4rem 1.6rem;
   margin-bottom: 1.5rem;
   transition: border-color 0.2s;
 }
 .article-block:hover {
-  border-color: var(--accent);
-  border-left-color: var(--accent-hover);
+  border-color: var(--gold);
+  border-left-color: var(--gold-hover);
 }
 .article-block h2 {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -645,9 +652,10 @@ footer {
 .section-label {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--teal-hover);
   margin: 2rem 0 0.5rem;
   padding-top: 0.5rem;
+  letter-spacing: 0.03em;
 }
 .section-label.red { color: #f85149; }
 .section-desc {
@@ -692,7 +700,7 @@ footer {
 .factors-box {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--teal-hover);
   border-radius: 8px;
   padding: 1.1rem 1.4rem;
   margin: 1.5rem 0 2.5rem;
@@ -725,8 +733,8 @@ footer {
   font-family: inherit;
 }
 .nav-dropdown-btn:hover {
-  border-color: var(--accent);
-  color: var(--text-primary);
+  border-color: var(--gold);
+  color: var(--gold);
 }
 .nav-dropdown {
   display: none;
@@ -758,7 +766,7 @@ footer {
   text-decoration: none;
 }
 .nav-dropdown a.active {
-  color: var(--accent);
+  color: var(--gold);
   font-weight: 600;
   background: #0d1628;
 }
@@ -776,7 +784,7 @@ footer {
 .info-list li::before {
   content: '—';
   position: absolute; left: 0;
-  color: var(--accent); font-weight: 700;
+  color: var(--gold); font-weight: 700;
 }
 .code-wrap {
   position: relative;
