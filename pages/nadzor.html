@@ -5,6 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Надзорная деятельность — Методичка ОСБ</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .step {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      transition: border-color 0.2s;
+    }
+    .step:hover { border-color: var(--accent); }
+    .step-num {
+      flex-shrink: 0;
+      width: 2.2rem;
+      height: 2.2rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-top: 0.1rem;
+    }
+    .step-body { flex: 1; }
+    .step-body strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .step-body p {
+      margin: 0 0 0.3rem;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .step-body a { color: var(--accent); }
+    .step-body a:hover { color: var(--accent-hover); }
+
+    /* Открытый надзор — зелёный */
+    .step.open .step-num { background: #238636; }
+    .step.open:hover { border-color: #2ea043; }
+
+    /* Скрытый надзор — фиолетовый */
+    .step.covert .step-num { background: #6e40c9; }
+    .step.covert:hover { border-color: #8b5cf6; }
+
+    /* Запреты — красный */
+    .step.warning .step-num { background: #da3633; }
+    .step.warning:hover { border-color: #f85149; }
+    .step.warning {
+      border-color: #3d1f1f;
+      background: #160d0d;
+    }
+
+    .section-label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 2rem 0 0.75rem;
+    }
+    .section-label.red { color: #f85149; }
+  </style>
 </head>
 <body>
 
@@ -18,15 +90,63 @@
     <h1>Надзорная деятельность</h1>
   </div>
   <div class="page-content">
-    <p>Отдел собственной безопасности имеет право проводить надзор за сотрудниками МВД в целях обеспечения законности и соблюдения служебной дисциплины.</p>
-    <p>Оперуполномоченные ОСБ вправе вести как обычную надзорную деятельность в пределах своей организации, так и скрытую, что включает в себя снятие любых опознавательных знаков (форма, служебный автомобиль).</p>
-    <p>Оперуполномоченные ОСБ имеют право в любое время дня и ночи без формы наблюдать за правомерностью действий сотрудников МВД.</p>
-    <p>В ходе надзорной деятельности сотрудникам ОСБ <strong>запрещается</strong>:</p>
-    <ul>
-      <li>нарушать действующее законодательство при проведении любых надзорных мероприятий;</li>
-      <li>провоцировать сотрудников на совершение правонарушений или умышленно создавать условия для их совершения.</li>
-    </ul>
+    <p>Отдел собственной безопасности имеет право проводить надзор за сотрудниками МВД в целях обеспечения законности и соблюдения служебной дисциплины. Оперуполномоченные ОСБ имеют право в любое время дня и ночи наблюдать за правомерностью действий сотрудников МВД.</p>
   </div>
+
+  <!-- ВИДЫ НАДЗОРА -->
+  <h2 class="section-label">Виды надзорной деятельности</h2>
+
+  <div class="steps">
+
+    <div class="step open">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>Открытый надзор</strong>
+        <p>Осуществляется в установленной форме с опознавательными знаками. Транспортное средство — служебный автомобиль либо личный автомобиль, соответствующий требованиям статьи 23 ФП №&nbsp;1. Сотрудник действует открыто, не скрывая принадлежности к ОСБ.</p>
+      </div>
+    </div>
+
+    <div class="step covert">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Скрытый надзор</strong>
+        <p>Предусматривает снятие всех опознавательных знаков: гражданская одежда вместо формы, использование служебного или личного автомобиля без маркировки. Сотрудник не раскрывает свою принадлежность к ОСБ в ходе наблюдения. Личное транспортное средство должно соответствовать требованиям статьи 23 ФП №&nbsp;1.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ЗАПРЕЩАЕТСЯ -->
+  <h2 class="section-label red">Запрещается</h2>
+
+  <div class="steps">
+
+    <div class="step warning">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>Нарушать законодательство при проведении надзора</strong>
+        <p>Любые надзорные мероприятия осуществляются строго в рамках действующего законодательства. Нарушение норм закона в ходе надзора влечёт дисциплинарную ответственность сотрудника ОСБ.</p>
+      </div>
+    </div>
+
+    <div class="step warning">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Провоцировать сотрудников на нарушения</strong>
+        <p>Категорически запрещается умышленно создавать условия или побуждать сотрудников к совершению правонарушений с целью их последующей фиксации.</p>
+      </div>
+    </div>
+
+    <div class="step warning">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>Использовать личный автомобиль, не соответствующий требованиям</strong>
+        <p>Личное транспортное средство, применяемое в ходе надзорной деятельности, обязано соответствовать требованиям статьи 23 ФП №&nbsp;1. Использование не отвечающего требованиям автомобиля в служебных целях недопустимо.</p>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 <footer>

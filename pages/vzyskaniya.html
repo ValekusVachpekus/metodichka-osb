@@ -5,6 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Меры дисциплинарного взыскания — Методичка ОСБ</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.2rem 0 2.5rem;
+    }
+    .step {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.4rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .step:hover {
+      transform: translateX(4px);
+    }
+    .step-icon {
+      flex-shrink: 0;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin-top: 0.1rem;
+    }
+    .step-body { flex: 1; }
+    .step-body strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 0.97rem;
+      margin-bottom: 0.25rem;
+    }
+    .step-body p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* Воздействие — зелёный */
+    .step.green { border-color: #1a3a22; }
+    .step.green:hover { border-color: #2ea043; }
+    .step.green .step-icon { background: #0d2414; color: #3fb950; }
+
+    /* Лёгкое взыскание — жёлтый */
+    .step.yellow { border-color: #3a3010; }
+    .step.yellow:hover { border-color: #d29922; }
+    .step.yellow .step-icon { background: #1e1a08; color: #d29922; }
+
+    /* Среднее взыскание — оранжевый */
+    .step.orange { border-color: #3a1f0a; }
+    .step.orange:hover { border-color: #e06c1a; }
+    .step.orange .step-icon { background: #1e1008; color: #e06c1a; }
+
+    /* Тяжёлое взыскание — красный */
+    .step.red { border-color: #3d1f1f; background: #120a0a; }
+    .step.red:hover { border-color: #f85149; }
+    .step.red .step-icon { background: #200d0d; color: #f85149; }
+
+    /* Высшее взыскание — тёмно-красный */
+    .step.darkred { border-color: #5c1010; background: #160505; }
+    .step.darkred:hover { border-color: #ff4040; }
+    .step.darkred .step-icon { background: #2d0505; color: #ff6b6b; }
+
+    .section-label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 2rem 0 0.5rem;
+    }
+    .section-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+    .severity-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.5rem 0 1.2rem;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+    .severity-bar span {
+      display: inline-block;
+      height: 4px;
+      border-radius: 2px;
+      flex: 1;
+    }
+    .factors-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.1rem 1.4rem;
+      margin: 1.5rem 0 2.5rem;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .factors-box strong {
+      color: var(--text-primary);
+    }
+    .factors-box ul {
+      margin: 0.5rem 0 0 1.2rem;
+      padding: 0;
+    }
+    .factors-box ul li {
+      margin-bottom: 0.3rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,34 +134,123 @@
     <a class="back-link" href="../index.html">← На главную</a>
     <h1>Меры дисциплинарного взыскания</h1>
   </div>
-  <div class="page-content">
-    <p>К сотруднику, совершившему дисциплинарный проступок или иное нарушение, могут применяться:</p>
 
-    <p>При выборе меры взыскания необходимо руководствоваться принципами <strong>гуманизма и лояльности</strong>. Конкретная мера определяется с учётом следующих факторов:</p>
-    <ul class="info-list">
-      <li><strong>Тяжесть нарушения</strong> — степень ущерба, причинённого службе, гражданам или репутации органа;</li>
-      <li><strong>Рецидив</strong> — повторное совершение аналогичного или схожего нарушения влечёт более строгую меру;</li>
-      <li><strong>Опыт и стаж сотрудника</strong> — к опытному сотруднику, знающему уставные требования, применяется более строгое взыскание, чем к новому сотруднику, впервые допустившему нарушение.</li>
-    </ul>
-
-    <h2>Меры дисциплинарного воздействия</h2>
+  <!-- ПРИНЦИПЫ -->
+  <div class="factors-box">
+    <strong>Принципы назначения мер</strong>
+    <p>При выборе меры взыскания необходимо руководствоваться принципами <strong>гуманизма и лояльности</strong>. Конкретная мера определяется с учётом:</p>
     <ul>
-      <li>Проведение разъяснительной или профилактической беседы;</li>
-      <li>Лишение поощрения;</li>
-      <li>Переаттестация.</li>
-    </ul>
-
-    <h2>Дисциплинарные взыскания</h2>
-    <ul>
-      <li>Замечание;</li>
-      <li>Выговор без занесения в личное дело (устный выговор, выговор);</li>
-      <li>Выговор с занесением в личное дело (строгий выговор, письменный выговор);</li>
-      <li>Понижение в звании или должности;</li>
-      <li>Отстранение от занимаемой должности;</li>
-      <li>Увольнение;</li>
-      <li>Увольнение с занесением в чёрный список.</li>
+      <li><strong>Тяжести нарушения</strong> — степень ущерба, причинённого службе, гражданам или репутации органа;</li>
+      <li><strong>Рецидива</strong> — повторное нарушение влечёт более строгую меру;</li>
+      <li><strong>Опыта и стажа сотрудника</strong> — к опытному сотруднику применяется более строгое взыскание, чем к новому, впервые допустившему нарушение.</li>
     </ul>
   </div>
+
+  <!-- МЕРЫ ВОЗДЕЙСТВИЯ -->
+  <h2 class="section-label">Меры дисциплинарного воздействия</h2>
+  <p class="section-desc">Применяются при незначительных нарушениях и в целях профилактики. Не являются взысканием.</p>
+
+  <div class="steps">
+
+    <div class="step green">
+      <div class="step-icon">💬</div>
+      <div class="step-body">
+        <strong>Разъяснительная или профилактическая беседа</strong>
+        <p>Проводится с целью предупреждения нарушений, разъяснения требований устава и законодательства.</p>
+      </div>
+    </div>
+
+    <div class="step green">
+      <div class="step-icon">🏅</div>
+      <div class="step-body">
+        <strong>Лишение поощрения</strong>
+        <p>Отмена ранее представленного или запланированного поощрения — премии, грамоты, благодарности.</p>
+      </div>
+    </div>
+
+    <div class="step green">
+      <div class="step-icon">📋</div>
+      <div class="step-body">
+        <strong>Переаттестация</strong>
+        <p>Внеплановая проверка соответствия сотрудника занимаемой должности и уровню профессиональной подготовки.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ДИСЦИПЛИНАРНЫЕ ВЗЫСКАНИЯ -->
+  <h2 class="section-label">Дисциплинарные взыскания</h2>
+  <p class="section-desc">Применяются за конкретные нарушения. Степень строгости нарастает снизу вверх.</p>
+
+  <div class="severity-bar">
+    <span>Мягче</span>
+    <span style="background:#d29922;"></span>
+    <span style="background:#e06c1a;"></span>
+    <span style="background:#f85149;"></span>
+    <span style="background:#ff4040;"></span>
+    <span>Строже</span>
+  </div>
+
+  <div class="steps">
+
+    <div class="step yellow">
+      <div class="step-icon">📌</div>
+      <div class="step-body">
+        <strong>Замечание</strong>
+        <p>Наименее строгая форма взыскания. Выносится устно или письменно при незначительных нарушениях.</p>
+      </div>
+    </div>
+
+    <div class="step yellow">
+      <div class="step-icon">📄</div>
+      <div class="step-body">
+        <strong>Выговор без занесения в личное дело</strong>
+        <p>Устный или письменный выговор. Не отражается в личном деле сотрудника.</p>
+      </div>
+    </div>
+
+    <div class="step orange">
+      <div class="step-icon">📂</div>
+      <div class="step-body">
+        <strong>Выговор с занесением в личное дело</strong>
+        <p>Строгий или письменный выговор. Фиксируется в личном деле и учитывается при последующих нарушениях.</p>
+      </div>
+    </div>
+
+    <div class="step orange">
+      <div class="step-icon">🔽</div>
+      <div class="step-body">
+        <strong>Понижение в звании или должности</strong>
+        <p>Применяется при систематических нарушениях или серьёзном единичном проступке.</p>
+      </div>
+    </div>
+
+    <div class="step red">
+      <div class="step-icon">🚫</div>
+      <div class="step-body">
+        <strong>Отстранение от занимаемой должности</strong>
+        <p>Временное или постоянное отстранение от исполнения служебных обязанностей.</p>
+      </div>
+    </div>
+
+    <div class="step red">
+      <div class="step-icon">🚪</div>
+      <div class="step-body">
+        <strong>Увольнение</strong>
+        <p>Расторжение контракта и увольнение из органов внутренних дел.</p>
+      </div>
+    </div>
+
+    <div class="step darkred">
+      <div class="step-icon">⛔</div>
+      <div class="step-body">
+        <strong>Увольнение с занесением в чёрный список</strong>
+        <p>Высшая мера. Применяется за грубые или умышленные нарушения. Исключает возможность повторного трудоустройства в органы внутренних дел.</p>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 <footer>

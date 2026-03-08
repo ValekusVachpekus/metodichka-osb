@@ -5,6 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Опрос — Методичка ОСБ</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .step {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      transition: border-color 0.2s;
+    }
+    .step:hover {
+      border-color: var(--accent);
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 2.2rem;
+      height: 2.2rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-top: 0.1rem;
+    }
+    .step-body {
+      flex: 1;
+    }
+    .step-body strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .step-body p {
+      margin: 0 0 0.3rem;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .step-body a {
+      color: var(--accent);
+    }
+    .step-body a:hover {
+      color: var(--accent-hover);
+    }
+    /* Методы — иной акцент */
+    .step.method .step-num {
+      background: #6e40c9;
+    }
+    .step.method:hover {
+      border-color: #8b5cf6;
+    }
+    /* Важно — красный акцент */
+    .step.warning .step-num {
+      background: #da3633;
+    }
+    .step.warning:hover {
+      border-color: #f85149;
+    }
+    .step.warning {
+      border-color: #3d1f1f;
+      background: #160d0d;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,6 +92,7 @@
     <h1>Опрос</h1>
   </div>
   <div class="page-content">
+
     <h2>Общие правила проведения опросов</h2>
     <ol>
       <li>Опрос проводится уполномоченным лицом на месте нахождения опрашиваемого, либо в каком-либо помещении с осуществлением аудио- и видеофиксации, протоколом опроса.</li>
@@ -25,7 +100,134 @@
       <li>Продолжительность процедуры опроса не ограничивается определённым количеством времени.</li>
     </ol>
     <p>Также во время опроса необходимо получить все ответы на интересующие вас вопросы.</p>
+
   </div>
+
+  <!-- ПОРЯДОК ПРОВЕДЕНИЯ -->
+  <h2 style="font-size:1.2rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Порядок проведения опроса</h2>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>Выбрать место для опроса</strong>
+        <p>Опрос проводится в помещении, оборудованном видео- и аудионаблюдением: кабинет руководства, кабинет в отделе или иное подходящее служебное помещение. Место должно исключать посторонних лиц и обеспечивать конфиденциальность.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Связаться с сотрудником и вызвать его на опрос</strong>
+        <p>Вызов осуществляется по рации или по телефону. Оперуполномоченный обязан представиться, указав должность и звание, и сообщить о необходимости явки на опрос без раскрытия его предмета.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>Установить личность опрашиваемого</strong>
+        <p>По прибытии сотрудника оперуполномоченный представляется лично, после чего проверяет документы опрашиваемого и фиксирует его личные данные в протоколе опроса.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <strong>Разъяснить причину вызова</strong>
+        <p>Опрашиваемому в доступной форме объясняется, по какому факту или нарушению проводится опрос: описывается ситуация, её обстоятельства и предмет проверки.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <strong>Ознакомиться с личным делом сотрудника</strong>
+        <p>Изучаются трудовая книжка, сведения об опыте работы, предыдущих взысканиях и иных обстоятельствах, которые влияют на выбор меры дисциплинарного воздействия — подробнее см. раздел <a href="vzyskaniya.html">«Меры дисциплинарного взыскания»</a>.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-body">
+        <strong>Завершить опрос и уведомить сотрудника</strong>
+        <p>По окончании опроса сотруднику сообщается предварительное решение: будет ли составлен рапорт о нарушении и по какому основанию. При необходимости разъясняется порядок обжалования принятого решения.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">7</div>
+      <div class="step-body">
+        <strong>Сохранить материалы опроса</strong>
+        <p>Видеозапись и протокол опроса переносятся на USB-накопитель, который впоследствии прикрепляется к рапорту в качестве приложения — подробнее см. раздел <a href="raporty.html">«Написание рапортов»</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- МЕТОДЫ ОПРОСА -->
+  <h2 style="font-size:1.2rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Методы опроса</h2>
+
+  <div class="steps">
+
+    <div class="step method">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>Установление доверия</strong>
+        <p>Оперуполномоченный демонстрирует понимание ситуации, избегает давления и выстраивает доброжелательный диалог. Опрашиваемый, чувствуя, что его выслушивают без предвзятости, как правило, сообщает значительно больше информации.</p>
+      </div>
+    </div>
+
+    <div class="step method">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Демонстрация доказательной базы</strong>
+        <p>Если опрашиваемый уклоняется от ответов, оперуполномоченный может указать, что достаточная доказательная база уже собрана, и обозначить, что признание смягчает последствия. Применяется корректно, без прямых угроз и введения в заблуждение.</p>
+      </div>
+    </div>
+
+    <div class="step method">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>Метод «хороший — плохой коп»</strong>
+        <p>Используется в исключительных случаях и требует двух оперуполномоченных. Первый ведёт жёсткий опрос с акцентом на доказательства. Затем второй просит коллегу выйти и продолжает беседу в мягком, участливом тоне. На контрасте опрашиваемый нередко проявляет большее доверие ко второму оперуполномоченному и охотнее идёт на контакт.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ВАЖНО -->
+  <h2 style="font-size:1.2rem;font-weight:700;color:#f85149;margin:2rem 0 0.75rem;">Важно</h2>
+
+  <div class="steps">
+
+    <div class="step warning">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>Опрос — добровольная процедура</strong>
+        <p>Сотрудник вправе отказаться от дачи показаний. В этом случае рапорт составляется на основании уже имеющихся материалов и доказательств, без принуждения к участию в опросе.</p>
+      </div>
+    </div>
+
+    <div class="step warning">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Строгое соблюдение закона и этики</strong>
+        <p>В ходе опроса категорически недопустимы: оскорбления, повышение голоса, прямые угрозы и любые иные действия, нарушающие нормы этики, субординации и законодательства. Нарушение этих требований влечёт дисциплинарную ответственность самого оперуполномоченного.</p>
+      </div>
+    </div>
+
+    <div class="step warning">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>Обязательная видеофиксация</strong>
+        <p>Весь ход опроса должен фиксироваться на видео. Запись является гарантией соблюдения законности как для опрашиваемого, так и для оперуполномоченного, и служит неотъемлемым приложением к материалам проверки.</p>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 <footer>
