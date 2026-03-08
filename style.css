@@ -9,16 +9,16 @@
   --bg-dark: #080e1a;
   --bg-card: #0d1628;
   --bg-nav: #060b14;
-  --accent: #2c5f9e;
-  --accent-hover: #4a85c8;
+  --accent: #5294d6;
+  --accent-hover: #7ab3e8;
   --text-primary: #eaf2fc;
-  --text-secondary: #a0bcd8;
-  --border: #1a2d4a;
+  --text-secondary: #b8d0e8;
+  --border: #1e3355;
   /* Дополнительные акценты */
-  --gold: #c8943a;
-  --gold-hover: #e0aa4a;
+  --gold: #d4a843;
+  --gold-hover: #ecc15a;
   --teal: #1f7a70;
-  --teal-hover: #2aaa9b;
+  --teal-hover: #3dbfb0;
 }
 
 body {
@@ -82,7 +82,7 @@ body > nav .nav-logo:hover {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(44, 95, 158, 0.12) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(82, 148, 214, 0.1) 0%, transparent 70%);
 }
 
 .hero-content {
@@ -200,16 +200,19 @@ body > nav .nav-logo:hover {
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
   border-radius: 10px;
   overflow: hidden;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
-  border-color: var(--accent);
+  border-color: var(--accent-hover);
+  border-top-color: var(--gold);
   transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
 .card-img {
@@ -226,8 +229,8 @@ body > nav .nav-logo:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
-  background: linear-gradient(135deg, #111e35 0%, #080e1a 100%);
+  font-size: 2.8rem;
+  background: linear-gradient(135deg, #0e1f3a 0%, #152843 100%);
   border-bottom: 1px solid var(--border);
 }
 
