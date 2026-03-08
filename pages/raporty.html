@@ -6,10 +6,64 @@
   <title>Написание рапортов — Методичка ОСБ</title>
   <link rel="stylesheet" href="../style.css">
   <style>
+    .info-list { list-style: none; padding: 0; margin: 0.5rem 0 1.2rem; }
+    .info-list li {
+      padding: 0.5rem 0 0.5rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      position: relative;
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-list li::before {
+      content: '—';
+      position: absolute; left: 0;
+      color: var(--accent); font-weight: 700;
+    }
+
+    /* Блок кода */
+    .code-wrap {
+      position: relative;
+      margin: 0.5rem 0 1.8rem;
+    }
+    .code-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-bottom: none;
+      border-radius: 6px 6px 0 0;
+      padding: 0.4rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .copy-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .copy-btn.copied {
+      color: #3fb950;
+      border-color: #3fb950;
+    }
     .code-block {
       background: #0d1117;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 0 0 6px 6px;
       padding: 1.2rem 1.4rem;
       font-family: 'Courier New', monospace;
       font-size: 0.82rem;
@@ -17,36 +71,53 @@
       white-space: pre-wrap;
       word-break: break-word;
       overflow-x: auto;
-      margin: 0.75rem 0 1.5rem;
+      margin: 0;
     }
-    .code-label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.3rem;
-    }
-    .info-list li {
-      margin-bottom: 0.6rem;
+    /* Кнопки внизу */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1rem 0 1.5rem;
     }
     .app-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      margin: 0.5rem 0 1.5rem;
       padding: 0.6rem 1.3rem;
       background: #238636;
-      color: #fff !important;
+      color: #fff;
       border-radius: 6px;
       font-weight: 600;
       font-size: 0.92rem;
-      text-decoration: none !important;
-      transition: background 0.2s;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
     }
     .app-btn:hover {
       background: #2ea043;
-      text-decoration: none !important;
+      text-decoration: none;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .forum-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.3rem;
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .forum-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -58,7 +129,11 @@
 
 <div class="page-wrapper">
   <div class="page-header">
-    <a class="back-link" href="../index.html">← На главную</a>
+    <nav class="breadcrumb">
+      <a href="../index.html">← На главную</a>
+      <span class="sep">/</span>
+      <span class="current">Написание рапортов</span>
+    </nav>
     <h1>Написание рапортов</h1>
   </div>
   <div class="page-content">
@@ -86,11 +161,23 @@
     </ul>
 
     <p>Все рапорты подаются в форумный раздел — необходимо создать тему и назвать её по установленному формату:</p>
-    <div class="code-block">Рапорт о дисциплинарном проступке – Alexey_Akimov</div>
+
+    <div class="code-wrap">
+      <div class="code-label">
+        <span>Пример названия темы</span>
+        <button class="copy-btn" onclick="copyCode(this)">Скопировать</button>
+      </div>
+      <pre class="code-block">Рапорт о дисциплинарном проступке – Alexey_Akimov</pre>
+    </div>
 
     <h2>Форма подачи рапорта</h2>
-    <p class="code-label">Код</p>
-    <div class="code-block">[RIGHT][SIZE=15px][FONT=Times New Roman]Руководству ГАИ по Нижегородской области[/FONT][/SIZE]
+
+    <div class="code-wrap">
+      <div class="code-label">
+        <span>Код</span>
+        <button class="copy-btn" onclick="copyCode(this)">Скопировать</button>
+      </div>
+      <pre class="code-block">[RIGHT][SIZE=15px][FONT=Times New Roman]Руководству ГАИ по Нижегородской области[/FONT][/SIZE]
 [FONT=Times New Roman][SIZE=15px]от [Должность и ФИО полностью][/SIZE][/FONT]
 [/RIGHT]
 [HEADING=2][CENTER][FONT=Times New Roman][SIZE=15px][B]РАПОРТ О ДИСЦИПЛИНАРНОМ ПРОСТУПКЕ[/B][/SIZE][/FONT][/CENTER][/HEADING]
@@ -105,11 +192,17 @@
 [RIGHT]
 [FONT=Times New Roman][SIZE=15px]Дата: «_[B]» _________ [/B]20 г.[/SIZE][/FONT]
 [SIZE=15px][FONT=Times New Roman]Подпись: ________________ / [Ваша ФИО][/FONT][/SIZE]
-[/RIGHT]</div>
+[/RIGHT]</pre>
+    </div>
 
     <h2>Форма ответа руководства</h2>
-    <p class="code-label">Код</p>
-    <div class="code-block">[IMG]https://i.postimg.cc/9Qs7NY1z/e-Ztfd4G-(1).png[/IMG]
+
+    <div class="code-wrap">
+      <div class="code-label">
+        <span>Код</span>
+        <button class="copy-btn" onclick="copyCode(this)">Скопировать</button>
+      </div>
+      <pre class="code-block">[IMG]https://i.postimg.cc/9Qs7NY1z/e-Ztfd4G-(1).png[/IMG]
 
 [CENTER][FONT=Times New Roman][SIZE=15px]УВЕДОМЛЕНИЕ
 
@@ -121,23 +214,22 @@
 
 [RIGHT][FONT=Times New Roman][SIZE=15px]Должность
 специальное звание
-Фамилия И. О.[/SIZE][/FONT][/RIGHT]</div>
+Фамилия И. О.[/SIZE][/FONT][/RIGHT]</pre>
+    </div>
 
     <h2>Подача рапорта</h2>
 
-    <a class="app-btn" href="https://github.com/ValekusVachpekus/osb-raport-generator" target="_blank" rel="noopener">
-      ⚙️ Python-приложение для написания рапортов
-    </a>
-
-    <a class="app-btn" href="https://valekusvachpekus.github.io/osb-raport-generator-web/" target="_blank" rel="noopener">
-      🌐 Веб-приложение (сайт) для написания рапортов
-    </a>
-
-    <p>
-      <a href="https://forum.amazing-online.com/threads/informacionnaja-tema-po-napisaniju-raportov-o-disciplinarnyx-prostupkax.1088637/" target="_blank" rel="noopener">
-        Форумный раздел для подачи рапортов →
+    <div class="btn-group">
+      <a class="app-btn" href="https://github.com/ValekusVachpekus/osb-raport-generator" target="_blank" rel="noopener">
+        ⚙️ Python-приложение
       </a>
-    </p>
+      <a class="app-btn" href="https://valekusvachpekus.github.io/osb-raport-generator-web/" target="_blank" rel="noopener">
+        🌐 Веб-приложение
+      </a>
+      <a class="forum-btn" href="https://forum.amazing-online.com/threads/informacionnaja-tema-po-napisaniju-raportov-o-disciplinarnyx-prostupkax.1088637/" target="_blank" rel="noopener">
+        📋 Форумный раздел для подачи рапортов
+      </a>
+    </div>
 
   </div>
 </div>
@@ -145,6 +237,20 @@
 <footer>
   <p>Методическое пособие ОСБ. Автор: Vladislav_Shetkov &nbsp;|&nbsp; Одобрил: Danila_Leonov</p>
 </footer>
+
+<script>
+function copyCode(btn) {
+  const pre = btn.closest('.code-wrap').querySelector('pre');
+  navigator.clipboard.writeText(pre.textContent).then(() => {
+    btn.textContent = 'Скопировано!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Скопировать';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
 
 </body>
 </html>

@@ -5,78 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Надзорная деятельность — Методичка ОСБ</title>
   <link rel="stylesheet" href="../style.css">
-  <style>
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      margin: 1.5rem 0 2.5rem;
-    }
-    .step {
-      display: flex;
-      gap: 1.2rem;
-      align-items: flex-start;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.2rem 1.4rem;
-      transition: border-color 0.2s;
-    }
-    .step:hover { border-color: var(--accent); }
-    .step-num {
-      flex-shrink: 0;
-      width: 2.2rem;
-      height: 2.2rem;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 0.95rem;
-      margin-top: 0.1rem;
-    }
-    .step-body { flex: 1; }
-    .step-body strong {
-      display: block;
-      color: var(--text-primary);
-      font-size: 1rem;
-      margin-bottom: 0.35rem;
-    }
-    .step-body p {
-      margin: 0 0 0.3rem;
-      color: var(--text-secondary);
-      font-size: 0.92rem;
-      line-height: 1.6;
-    }
-    .step-body a { color: var(--accent); }
-    .step-body a:hover { color: var(--accent-hover); }
-
-    /* Открытый надзор — зелёный */
-    .step.open .step-num { background: #238636; }
-    .step.open:hover { border-color: #2ea043; }
-
-    /* Скрытый надзор — фиолетовый */
-    .step.covert .step-num { background: #6e40c9; }
-    .step.covert:hover { border-color: #8b5cf6; }
-
-    /* Запреты — красный */
-    .step.warning .step-num { background: #da3633; }
-    .step.warning:hover { border-color: #f85149; }
-    .step.warning {
-      border-color: #3d1f1f;
-      background: #160d0d;
-    }
-
-    .section-label {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin: 2rem 0 0.75rem;
-    }
-    .section-label.red { color: #f85149; }
-  </style>
 </head>
 <body>
 
@@ -86,7 +14,11 @@
 
 <div class="page-wrapper">
   <div class="page-header">
-    <a class="back-link" href="../index.html">← На главную</a>
+    <nav class="breadcrumb">
+      <a href="../index.html">← На главную</a>
+      <span class="sep">/</span>
+      <span class="current">Надзорная деятельность</span>
+    </nav>
     <h1>Надзорная деятельность</h1>
   </div>
   <div class="page-content">

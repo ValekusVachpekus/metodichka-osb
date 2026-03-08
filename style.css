@@ -361,3 +361,290 @@ footer {
   .sections-grid { padding: 0 1rem; }
   .about, .page-wrapper { padding: 0 1rem; }
 }
+
+/* ===== Хлебные крошки ===== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.breadcrumb a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+.breadcrumb .sep {
+  color: var(--border);
+}
+.breadcrumb .current {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ===== Список задач (главная) ===== */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.task-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+.task-list li:last-child {
+  border-bottom: none;
+}
+.task-list li::before {
+  content: '—';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+/* ===== Блоки статей (полномочия) ===== */
+.article-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s;
+}
+.article-block:hover {
+  border-color: var(--accent);
+  border-left-color: var(--accent-hover);
+}
+.article-block h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.article-block ol, .article-block ul {
+  padding-left: 1.4rem;
+  color: var(--text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+.article-block ol li, .article-block ul li {
+  margin-bottom: 0.6rem;
+}
+.article-block p {
+  color: var(--text-secondary);
+  font-size: 0.93rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ===== Шаги (steps) ===== */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 1.2rem 0 2.5rem;
+}
+.step {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 1.4rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.step:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+.step-num, .step-icon {
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-top: 0.1rem;
+}
+.step-icon {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.step-body {
+  flex: 1;
+}
+.step-body strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.97rem;
+  margin-bottom: 0.3rem;
+}
+.step-body p {
+  margin: 0 0 0.3rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.step-body a { color: var(--accent); }
+.step-body a:hover { color: var(--accent-hover); }
+
+/* Варианты цвета шагов */
+.step.open .step-num, .step.open .step-icon { background: #238636; }
+.step.open:hover { border-color: #2ea043; }
+
+.step.covert .step-num, .step.covert .step-icon { background: #6e40c9; }
+.step.covert:hover { border-color: #8b5cf6; }
+
+.step.method .step-num, .step.method .step-icon { background: #6e40c9; }
+.step.method:hover { border-color: #8b5cf6; }
+
+.step.warning {
+  border-color: #3d1f1f;
+  background: #120a0a;
+}
+.step.warning .step-num, .step.warning .step-icon { background: #da3633; }
+.step.warning:hover { border-color: #f85149; }
+
+.step.green { border-color: #1a3a22; }
+.step.green:hover { border-color: #2ea043; }
+.step.green .step-num, .step.green .step-icon { background: #0d2414; color: #3fb950; }
+
+.step.yellow { border-color: #3a3010; }
+.step.yellow:hover { border-color: #d29922; }
+.step.yellow .step-num, .step.yellow .step-icon { background: #1e1a08; color: #d29922; }
+
+.step.orange { border-color: #3a1f0a; }
+.step.orange:hover { border-color: #e06c1a; }
+.step.orange .step-num, .step.orange .step-icon { background: #1e1008; color: #e06c1a; }
+
+.step.red { border-color: #3d1f1f; background: #120a0a; }
+.step.red:hover { border-color: #f85149; }
+.step.red .step-num, .step.red .step-icon { background: #200d0d; color: #f85149; }
+
+.step.darkred { border-color: #5c1010; background: #160505; }
+.step.darkred:hover { border-color: #ff4040; }
+.step.darkred .step-num, .step.darkred .step-icon { background: #2d0505; color: #ff6b6b; }
+
+/* ===== Ветвление шагов ===== */
+.step-branch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0.5rem 0 2.5rem;
+}
+.branch {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.4rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.branch:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+.branch-tag {
+  flex-shrink: 0;
+  background: #21262d;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  margin-top: 0.15rem;
+}
+.branch-body { flex: 1; }
+.branch-body strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+.branch-body p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ===== Подписи секций ===== */
+.section-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 2rem 0 0.5rem;
+}
+.section-label.red { color: #f85149; }
+.section-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+.section-divider {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 2rem 0 0.75rem;
+}
+
+/* ===== Шкала тяжести ===== */
+.severity-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1.2rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.severity-bar span {
+  display: inline-block;
+  height: 4px;
+  border-radius: 2px;
+  flex: 1;
+}
+
+/* ===== Инфо-блок с акцентом ===== */
+.factors-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 1.1rem 1.4rem;
+  margin: 1.5rem 0 2.5rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.factors-box strong { color: var(--text-primary); }
+.factors-box ul {
+  margin: 0.5rem 0 0 1.2rem;
+  padding: 0;
+}
+.factors-box ul li { margin-bottom: 0.3rem; }
