@@ -356,10 +356,59 @@ footer {
 
 /* ===== Адаптивность ===== */
 @media (max-width: 600px) {
-  nav { padding: 0 1rem; }
+  body > nav { padding: 0 1rem; }
   .hero-content { padding: 2rem 1rem; }
   .sections-grid { padding: 0 1rem; }
   .about, .page-wrapper { padding: 0 1rem; }
+  .step { flex-direction: column; }
+  .step-num, .step-icon { width: 2rem; height: 2rem; font-size: 0.85rem; }
+}
+
+/* ===== Широкий экран (1280px+) ===== */
+@media (min-width: 1280px) {
+  .page-wrapper { max-width: 980px; }
+  .about { max-width: 980px; }
+  .sections-grid { max-width: 1300px; }
+  .hero-content { max-width: 960px; }
+}
+
+/* ===== Очень широкий экран (1600px+, 16:9) ===== */
+@media (min-width: 1600px) {
+  .page-wrapper { max-width: 1140px; }
+  .about { max-width: 1140px; }
+  .sections-grid {
+    max-width: 1500px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+  .hero-content { max-width: 1100px; }
+  .hero h1 { font-size: 3.4rem; }
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+  /* Одиночный шаг — растянуть на всю ширину (если нечётный последний) */
+  .steps .step:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+  /* Ветвление и предупреждения — всегда в один столбец */
+  .step-branch,
+  .steps:has(.step.warning),
+  .steps:has(.step.darkred) {
+    display: flex;
+    flex-direction: column;
+  }
+  .article-block { padding: 1.6rem 2rem; }
+}
+
+/* ===== Ультраширокий (1920px+) ===== */
+@media (min-width: 1920px) {
+  .page-wrapper { max-width: 1300px; }
+  .about { max-width: 1300px; }
+  .sections-grid {
+    max-width: 1700px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
 }
 
 /* ===== Хлебные крошки ===== */
@@ -598,6 +647,7 @@ footer {
   font-weight: 700;
   color: var(--text-primary);
   margin: 2rem 0 0.5rem;
+  padding-top: 0.5rem;
 }
 .section-label.red { color: #f85149; }
 .section-desc {
@@ -612,6 +662,14 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 2rem 0 0.75rem;
+}
+
+/* Горизонтальный разделитель между крупными секциями */
+.section-sep {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0 0;
+  position: relative;
 }
 
 /* ===== Шкала тяжести ===== */
