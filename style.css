@@ -258,6 +258,23 @@ nav .nav-logo:hover {
   color: var(--accent-hover);
 }
 
+/* Карточка-ссылка (страница нормативов) */
+a.card {
+  text-decoration: none;
+}
+
+a.card h3 {
+  color: var(--text-primary);
+}
+
+a.card p {
+  color: var(--text-secondary);
+}
+
+a.card:hover h3 {
+  color: var(--accent-hover);
+}
+
 /* ===== Страницы разделов ===== */
 .page-wrapper {
   max-width: 860px;
