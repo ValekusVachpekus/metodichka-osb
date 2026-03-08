@@ -34,7 +34,7 @@ a:hover {
 }
 
 /* ===== Навигация ===== */
-nav {
+body > nav {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -46,7 +46,7 @@ nav {
   height: 56px;
 }
 
-nav .nav-logo {
+body > nav .nav-logo {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -55,7 +55,7 @@ nav .nav-logo {
   white-space: nowrap;
 }
 
-nav .nav-logo:hover {
+body > nav .nav-logo:hover {
   color: var(--accent-hover);
   text-decoration: none;
 }
