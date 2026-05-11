@@ -14,5 +14,6 @@ pages/
   opros.html            — Опрос
   nadzor.html           — Надзорная деятельность
   vzyskaniya.html       — Меры дисциплинарного взыскания
+  vyyavlenie-vnedrennyh.html — Выявление внедрённых сотрудников
   normativy.html        — Нормативно-правовые документы
 ```
